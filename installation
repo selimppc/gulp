@@ -1,0 +1,57 @@
+## Gulp / Bower
+
+    bower install -g bower // run globally
+    bower init // install in project directory
+    bower install jquery angular backbone boostrap --save // install packages
+    bower list  // see the all lists intalled 
+    bower uninstall angular --save // uninstall a package
+    bower list --paths // view paths
+    
+## Gulp SASS | Compass
+    --- check the ruby -v installed or not
+    sudo gem update --system
+    sudo gem intall compass
+    gem -v
+    gem list
+    sudo gem install susy
+    sudo gem install breakpoint
+    
+## Compass Config.rb
+
+    --> paste the following lines into config.rd
+    require 'susy'
+    require 'breakpoint'
+    project_type= :stand-alone
+    http_path = "/"
+    sass_dir = "scss"
+    css_dir = "css"
+    image_dir = "images"
+    fonts_dir = "fonts"
+    javascript_dir = "js"
+    line_comments = false
+    preferred_syntax = :scss
+    output_style = :compressed or :exanded
+    relative_assets = true
+    
+## Installing Gulp -- Finally
+
+    npm install -g gulp // globally 
+    npm init // for local project
+    npm install gulp --save-dev
+    touch gulpfile.js
+    
+    npm install gulp-plumber gulp-uglify browser-sync gulp-compass gulp-autoprefixer del gulp-rename --save-dev  // all packages
+    
+    --->> keep the following code into the file gulpfile.js
+    Out First Task 
+    
+    var gulp = require('gulp'),
+        uglify = require('gulp-uglify'),
+        browserSync = require('browser-sync'),
+        reload = browserSync.reload,
+        compass = require('gulp-compass'),
+        plumber = require('gulp-plumber'),
+        rename = require('gulp-rename'),
+        autoprefixer = require('gulp-autoprefixer');
+
+
